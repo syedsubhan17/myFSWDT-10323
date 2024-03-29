@@ -5,29 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    ul>{
-        color: green;
-    }
-    ul>li:first-child{
-        color: aqua;
-    }
-    ul>li:last-child{
-        color: orange;
-    }
-    ul>li:nth-child(3){
-        color: purple;
+    div{
+        background: orange;
+        height: 300px;
+        width: 300px;
+        cursor: pointer;
     }
 
+    div:hover{
+        background: purple;
+        height: 200px;
+        width: 200px;
+        cursor: progress;
+    }
+    input:focus{
+        background-color: orange;
+    }
+
+    p::selection{
+        background-color: purple;
+        color: aliceblue;
+    }
     </style>
 </head>
 <body>
 
-    <ul>
-        <li>first element</li>
-        <li>second element</li>
-        <li>third element</li>
-        <li>fourth element</li>
-    </ul>
+    <!-- <div></div> -->
+    <input type="text" name="" id="">
+
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente architecto doloribus rem voluptatum asperiores reiciendis fugiat earum ipsum, perferendis libero accusantium, illum nisi. Perspiciatis natus nihil, facere impedit non est modi quibusdam similique, minus, explicabo aut mollitia veritatis sed porro quo recusandae fugiat placeat. Itaque adipisci vel dignissimos optio expedita! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo quo qui numquam, sed quaerat fugiat itaque, unde aliquam voluptatem delectus, cupiditate vel. Itaque fuga perferendis vero consequuntur eius dolore illo.</p> -->
 
 
     <!-- <ul class="kind1">
