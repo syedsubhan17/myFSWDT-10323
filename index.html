@@ -5,32 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .kind1{
+        ul{
             color: red;
         }
-        .kind2{
+        li{
+            color: orange;
+        }
+        ul.kind1 li{
+            color: purple;
+        }
+        .kind2 li{
             color: blue;
-        }
-        .kind3{
-            color: green;
-        }
-        ul>li{
-            color: cyan;
         }
     </style>
 </head>
 <body>
-    <ul>
-        <h2>kind 1</h2>
+    <ul class="kind1">
+        <!-- <h2>kind 1</h2> -->
         <li class="groupt1">kind1</li>
         <li class="groupt1">kind1</li>
-        <div>
-            <li>li inside a div</li>
-            <li>li inside a div</li>
-            <li>li inside a div</li>
-            <li>li inside a div</li>
-        </div>
-    </ul>   
+    </ul>
+
+    <ul class="kind2">
+        <li>kind 1</li>
+        <li>kind 1</li>
+    </ul>
+
+    <div class="kind1">
+        <li>something</li>
+        <li>something</li>
+        <li>something</li>
+        <li>something</li>
+    </div>
 <!--     
     <ul>
         <li>kind2</li>
