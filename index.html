@@ -11,17 +11,23 @@
             box-sizing: border-box;
         }
         
-        div{
-            background-color: orange;
-            margin-bottom: 10px;
+        .parent{
             height: 50px;
-            width: 60vw;
-            height: 80vh;
+            background-color: purple;
+            padding: 10px;
+            width: 60%;
+        }
+        .child{
+            height: 30px;
+            background-color: dodgerblue;
+            width: 50%; /*Underflow*/
+            width: 100vw; /*overflow*/
         }
     </style>
 </head>
 <body>
-    <div class>
+    <div class="parent">
+        <div class="child"></div>
     </div>    
 </body>
 </html>
