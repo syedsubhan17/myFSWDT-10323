@@ -11,19 +11,27 @@
             box-sizing: border-box;
         }
 
-        div{
-            width: 200px;
+        div.parent{
+            width: 250px;
             height: 200px;
-            /* margin: 40px; */
-            background-color: black;
+            background-color: orange;
+            position: absolute;
+            bottom: 0;
+        }
+        div.child{
+            height: 50px;
+            width: 50px;
+            background-color: purple;
+            border-radius: 25px;
             position: absolute;
             right: 0;
             bottom: 0;
-
         }
     </style>
 </head>
 <body>
-    <div></div>  
+    <div class="parent">
+        <div class="child"></div>
+    </div>  
 </body>
 </html>
