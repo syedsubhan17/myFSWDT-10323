@@ -10,22 +10,33 @@
             padding: 0;
             box-sizing: border-box;
         }
-        span{ /* this is inline element*/
-            width: 200px;
-            height: 200px;
-            background-color: orange;
-            display: block;
+        div.parent{ 
+            background-color: black;
+            height: 100vh;
+            width: 700px;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        div{ /*this is an block element*/
-            width: 200px;
+        div.child{
             height: 200px;
-            background-color: purple;
-            display: inline;
+            width: 150px;
+            background-color: orange;
+            margin: 10px;                        
         }
     </style>
 </head>
 <body>
-    <span></span>
-    <div></div>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
 </body>
 </html>
