@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: hsla(197, 100%, 63%, 1);
+
+    background: linear-gradient(90deg, rgb(66, 129, 255) 0%, rgb(132, 39, 225) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1 );
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+div.container{
+    width: 432px;
+    height: 535px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 8px;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+      
+}
+
+div.container header{
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+img.logo{
+    width: 40px;
+    margin: 0px auto;
+}
+
+div.container h2.title{
+    font-size: 34px;
+    font-weight: 700;
+    color: black;
+    margin-top: 24px;
+}
+
+div.container h2.title span{
+    color: #891dd1;
+}
+
+div.container div.login-message{
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    margin-top: 24px;
+}
+
+div.container form{
+    margin-top: 26px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div.container form input{
+    /* outline: none; */
+    padding: 8px 12px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid rgb(203, 199, 219);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+div.container form input:focus{
+    border-color: purple;
+}
+
+div.container form div.pass{
+    display: flex;
+    align-items: center;
+}
+
+div.container form div.pass input{
+    flex-grow: 1;
+}
+
+div.container form div.pass svg{
+    margin-top: 10px;
+}
+
+div.container form div.recovery{
+    font-size: 14px;
+    margin-top: 34px;
+    margin-left: 200px;
+    color: #891dd1;
+    justify-content: space-around;
+}
+
+div.container form button{
+    margin-top: 80px;
+    color: #fff;
+    align-items: center;
+    background-color: #891dd1;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
