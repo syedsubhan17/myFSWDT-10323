@@ -21,14 +21,25 @@
         div{
             height: 220px;
             width: 200px;
-            background-color: rgb(0, 238, 255);
-            transition-duration: 1s;
-            transition-timing-function: ease;
+            background-color: orange;
+            animation: play;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
         }
 
-        div:hover{
-            transform: skew(40deg, 30deg);
-            transform: translate(40px, 60px);
+        /* div:hover{         } */
+
+        @keyframes play {
+            from{
+                transform: scale(1);
+            } 
+            to{
+                transform: scale(1.5);
+                border-radius: 20px;
+            }
+            
         }
     </style>
 </head>
