@@ -3,9 +3,6 @@ const Name = "this is. a string"
 const isAdult = true
 
 const names =['name1', 'name2', 'name3']
-const names =['name1', 'name2', 'name3']
-const names =['name1', 'name2', 'name3']
-const names =['name1', 'name2', 'name3']
 
 //scope
 function greet(){
