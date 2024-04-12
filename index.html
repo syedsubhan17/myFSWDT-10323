@@ -11,10 +11,13 @@
 
         function cb(elemeant){
         if (elemeant % 2 === 0){
-        return elemeant
+            return true
+            }
+            else{
+            return false
             }
         }
-        const newArr = arr.map(cb)
+        const newArr = arr.filter(cb)
         
         console.log(newArr)
 
