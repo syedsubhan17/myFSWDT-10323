@@ -9,12 +9,37 @@
     <script>
 
 
-        function greet(name = 'default', age = 0) {
-            console.log('Hello ' + name + " " + age);
+        const greet = function(Name) {
+            console.log("Hi " + Name)
         }
-        
+        const greet1 = (Name) => {
+            console.log("Hey " + Name);
+        }
 
-        greet()
+        const sum = function(a,b) {
+            return a+b
+        }
+
+        const arrowSum = (a,b) => a+b
+
+        // console.log(sum(4,6))
+        // console.log(arrowSum(6,6));
+
+        // greet("syed")
+        // greet1("Subhan")
+
+
+        const arr = [1, 2, 3, 4, 5, 6]
+        function callback(items){
+            return items *2
+        }
+        const newarr = arr.map(callback)
+
+
+        const arr2 = arr.map(item => item*2)
+
+        console.log(newarr);
+        console.log(arr2); //reducw 4 lines of code
     </script>
 </body>
 </html>
