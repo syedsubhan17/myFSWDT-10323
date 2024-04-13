@@ -1,10 +1,18 @@
-const a = [1, 2, 3, 4, 5]
-const b = [5, 6, 7, 8, 9]
+const a = {
+    name: 'subhan',
+    age:22,
+    car:{
+        brand: 'BMW',
+        model: 'X5'
+    }
+}
 
-// const b = [...a]
-// console.log(b);
+const b = {
+    ...a,
+}
 
-const c = [...a,b]
-console.log(c);
-
+a.name = "syed"
+a.age = 18
+a.car.brand = 'Mercedes'
+a.car.model = 'C300D'
 console.log(a);
