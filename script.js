@@ -15,4 +15,5 @@ a.name = "syed"
 a.age = 18
 a.car.brand = 'Mercedes'
 a.car.model = 'C300D'
-console.log(a);
+
+console.log(b);
