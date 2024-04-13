@@ -7,13 +7,12 @@ const a = {
     }
 }
 
-const b = {
-    ...a,
+
+Object.keys(a).forEach(key =>{
+    console.log(key); //behind the itration in objects
+})
+
+for(let key in a){
+    console.log([key]);
+    console.log(a[key]);
 }
-
-a.name = "syed"
-a.age = 18
-a.car.brand = 'Mercedes'
-a.car.model = 'C300D'
-
-console.log(b);
