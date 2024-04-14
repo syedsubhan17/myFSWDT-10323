@@ -7,12 +7,8 @@ const a = {
     }
 }
 
-
-Object.keys(a).forEach(key =>{
-    console.log(key); //behind the itration in objects
-})
+const b = {}
 
 for(let key in a){
-    console.log([key]);
-    console.log(a[key]);
+    const vlue
 }
