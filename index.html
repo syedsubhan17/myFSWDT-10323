@@ -13,15 +13,13 @@
         <li>Arrow Functions</li>
     </ul>
     <script>
+        const greet = () => `Hello World`
         const name = "subhan"
         const age = 22
         console.log(name + ' is ' + age + ' years old');
 
-        const result = `${name} is ${age} year old`
+        const result = `${name} is ${greet()} year old`
         console.log(result);
-
-        const resultt = `${name} is ${8*2} year old`
-        console.log(resultt);
     </script>    
 </body>
 </html>
