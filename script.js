@@ -7,6 +7,10 @@ const a = {
     }
 }
 
-for(let key in a){
-    console.log(a[key])
-}
+Object.keys(a).forEach(key =>{
+    console.log(key);
+})
+
+// for(let key in a){
+//     console.log(a[key])
+// }
