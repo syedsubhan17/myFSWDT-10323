@@ -1,6 +1,12 @@
-// const headingObject = document.getElementById('heading')
-// const listObject = document.getElementById('list')
+const body = document.querySelector('body')
 
-const heading = document.querySelector('ul')
-// const heading = document.querySelectorAll('#list-ele')
-console.log(heading);
+const toggleTheme = () =>{
+    if(body.classList.contains('dark')){
+        body.classList.remove('dark')
+        body.classList.add('light')
+    }
+    else{
+        body.classList.remove('light')
+        body.classList.add('dark')
+    }
+}

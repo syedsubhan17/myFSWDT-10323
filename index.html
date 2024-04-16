@@ -5,14 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Object Model</title>
     <script defer src="./script.js"></script> 
+    <style>
+        body.dark{
+            transition: 2.5s ease;
+
+
+            background: black;
+            color: white;
+        }
+
+        body.light{
+            background: white;
+            color: black;
+        }
+    </style>
 </head>
-<body>
+<body class="light">
     <h1 id="heading">EcmaScript</h1>
     <ul id="list">
         <li class="list-ele">element before</li>
         <li class="list-ele">element before</li>
         <li class="list-ele">element before</li>
     </ul>
+
+    <button onclick="toggleTheme()">Theme</button>
        
 </body>
 </html>
