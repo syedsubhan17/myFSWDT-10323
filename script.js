@@ -5,6 +5,7 @@ const arr = ['element1', 'element2', 'element3', 'element4', 'element5',]
 
 const textNode = document.createTextNode('Hello World')
 
+listObject.innerHTML = ' '
 arr.forEach((element) => {
     const li = document.createElement('li')
     const text = document.createTextNode(element)
