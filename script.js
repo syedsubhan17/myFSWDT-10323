@@ -1,14 +1,21 @@
 const headingObject = document.getElementById('heading')
 const listObject = document.getElementById('list')
 
-const arr = ['element1', 'element2', 'element3', 'element4', 'element5',]
+const listElement = document.getElementsByClassName('list-ele')
 
-const textNode = document.createTextNode('Hello World')
+console.log(listElement); //getElementsbyClassname returns Array  eve nit conatins 1 value
+console.log(listObject); //it is normal
 
-listObject.innerHTML = ' '
-arr.forEach((element) => {
-    const li = document.createElement('li')
-    const text = document.createTextNode(element)
-    li.appendChild(text)
-    listObject.appendChild(li)
-})
+
+
+// const arr = ['element1', 'element2', 'element3', 'element4', 'element5',]
+
+// const textNode = document.createTextNode('Hello World')
+
+// listObject.innerHTML = ' '
+// arr.forEach((element) => {
+//     const li = document.createElement('li')
+//     const text = document.createTextNode(element)
+//     li.appendChild(text)
+//     listObject.appendChild(li)
+// })
