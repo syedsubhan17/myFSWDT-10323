@@ -7,13 +7,6 @@ const a = {
     }
 }
 
-const b = {
-    ...a,
+for(let key in a){
+    console.log(a[key])
 }
-
-a.name = 'syed'
-a.age = 23
-a.car.brand = 'mercedes'
-a.car.model = 'C300D' // this is also called nested spread operator
-
-console.log(b);
