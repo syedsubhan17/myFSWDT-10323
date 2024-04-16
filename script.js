@@ -1,15 +1,16 @@
-const a = {
-    name: 'subhan',
-    age: 22,  // shallow clone
-    car:{
-        brand: 'BMW',
-        model: 'XS'// deep clone
-    }
+// const greet = (name, age, time) => {
+//     console.log(`Hello ${name} you are ${age} years old and it is ${time} o,clock`)
+// }
+
+// greet('subhan', 30, 12)
+
+const greet = (...anything) => {
+    console.log(anything)
 }
 
-const {name:name1, 
-    age:personAge, 
-    car:hteircar
-} = a
+const [name1, ...anything] = ['john', 'mario', 'Lightning']
 
-console.log(name1, personAge, hteircar);
+console.log(name1);
+console.log(anything);
+
+greet('subhan', 30, 12)
