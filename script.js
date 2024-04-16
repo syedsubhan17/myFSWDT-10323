@@ -1,19 +1,19 @@
-// const a = [1, 2, 3 , 4, 5]
-
-// const b = [6, 7, 8, 9, 10]
-
-// const c = [...a,b]
-// console.log(c);
-
 const a = {
     name: 'subhan',
-    age: 22
+    age: 22,
+    car:{
+        brand: 'BMW',
+        model: 'XS'
+    }
 }
 
 const b = {
     ...a,
 }
 
-a.name = "syed"
+a.name = 'syed'
+a.age = 23
+a.car.brand = 'mercedes'
+a.car.model = 'C300D' // this is also called nested spread operator
 
 console.log(b);
