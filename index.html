@@ -6,12 +6,59 @@
     <title>Events in JavaScript</title>
     <script defer src="./events.js"></script>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        #body{
+            text-align: center;
+            background: #00b4db;
+        }
+
+        #inputbox{
+            height: 40px;
+            width: 60%;
+            margin: 20px;
+            border: solid 3px black;
+            border-radius: 8px;
+        }
+
+        #add, #edit{
+            width: 80px;
+            height: 42px;
+            color: salmon;
+            background-color: black;
+            font-size: 26px;
+            border-radius: 14%;
+        }
+
+        ul li{
+            height: 38%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul li button{            
+            width: 12%;
+            height: 20%;
+            margin-left: 5%;
+            color: white;
+            background-color: rgb(44, 15, 207);
+            font-size: 16px;
+            font-weight: 800;
+            border-radius: 14%;            
+        }
     </style>
 </head>
-<body class="">
-    <h1>Todo List</h1>
-    <h2><input type="text"><button>Add</button></h2>
+<body id="body">
+    <h1 id="heading-1">Todo List</h1>
+    <h2>
+        <input id="inputbox" type="text">
+        <button id="add">Add</button>
+        <button id="edit">Edit</button>
+    </h2>
     <ul></ul>
 </body>
 </html>
