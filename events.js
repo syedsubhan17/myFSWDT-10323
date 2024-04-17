@@ -13,6 +13,7 @@ const renderList = ()=>{
             li.remove()
             const id = todo.id //every element have it id or address location
             const index = todos.findIndex((todo) => todo.id === id)
+            todos.splice(index,1)
         }) //this will generate a delet button when add button hit
 
         button.innerHTML = 'delete'
