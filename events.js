@@ -1,19 +1,17 @@
 const body = document.querySelector('body')
 const button = document.querySelector('button')
 
-body.addEventListener('mousemove', (event) =>{
-    console.log(`Your clicked on this position: ${event.clientX} ${event.clientY}`);
-    const ele = document.createElement('div')
-    
-    ele.style=`
-    position: absolute;
-    top: ${event.clientY}px;
-    left: ${event.clientX}px;
-    width: 10px;
-    height:10px;
-    background-Color: cyan;
-    border-radius: 50%;
-    `
-
-    body.appendChild(ele)
+document.addEventListener('scroll', (event) =>{
+    if(window.scrollY > 400){
+        const ele = document.createElement('hi')
+        ele.innerHTML = 'Hello SUBHAN'
+        body.appendChild(ele)
+        ele.style =`
+        font-size: 20px;
+        transition: 1s ease;
+        position: absolute;
+        top: 450px;
+        left: 500px;
+        `
+    }
 })
