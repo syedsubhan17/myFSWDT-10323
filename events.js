@@ -3,7 +3,7 @@ const input = document.querySelector('input');
 const addButton = document.querySelector('#add');
 const editButton = document.querySelector('#edit');
 
-editButton.style = "display: none"
+// editButton.style = "display: none"
 
 let idOfElementToEdit = 'null';
 
