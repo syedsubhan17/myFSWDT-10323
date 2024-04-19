@@ -1,13 +1,4 @@
-// const getProducts1 = () =>{
-
-// }
-
-
-
-
-let products
-
-const getProducts2 = () => {
+const getProducts1 = () =>{
     setTimeout(()=>{
         products = [
             {name:'Apple', price: 100},
@@ -24,16 +15,3 @@ const getProducts2 = () => {
     },3000)
 }
 
-getProducts2()
-
-console.log(products);
-
-setTimeout(() => {
-    console.log(products)
-},1000)
-setTimeout(() => {
-    console.log(products)
-},2000)
-setTimeout(() => {
-    console.log(products)
-},3000)
