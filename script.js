@@ -1,22 +1,15 @@
+setTimeout(()=>{
+    console.log('three'); 
+},0)
 
+    console.log('one');
 
-    // console.log('one');
+    setTimeout(()=>{
+        console.log('four'); 
+    },0)
 
-    // console.log('two');
+    console.log('two');
 
-    // setTimeout(()=>{
-    //     console.log('three'); //delay operation
-    // },4000)
-
-
-console.log("one");
-
-for(let i = 0; i<10000; i++){
-    if(i === 9999){
-        console.log("three"); // blocking operation
+    for(let i = 0; i<5000; i++){
+        console.log("loop");
     }
-    else
-    console.log('');
-}
-
-console.log('two');
