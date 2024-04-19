@@ -1,15 +1,12 @@
-setTimeout(()=>{
-    console.log('three'); 
-},0)
+// setInterval(()=>{
+//     console.log("Interval");//executing code every sec
+// },1000)
 
-    console.log('one');
+let i = 0;
 
-    setTimeout(()=>{
-        console.log('four'); 
-    },0)
-
-    console.log('two');
-
-    for(let i = 0; i<5000; i++){
-        console.log("loop");
+const id = setInterval(() =>{
+    console.log('intervel');
+    if(++i === 10){
+        clearInterval(id)
     }
+},1000)
