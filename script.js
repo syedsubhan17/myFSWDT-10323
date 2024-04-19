@@ -32,16 +32,21 @@
 // console.log(result);
 
 const age = 11
+// const age = 21
 
 
 const myPromise = new Promise((resolve,reject) => {
     setTimeout(()=>{
-        if(age>18) resolve('You are eligible to vote') //this are blocking task
+        if(age>18) resolve('You are eligible to vote')
         else reject('You are not eligible to vote')
-    },5000)
+    },3000)
     
 })
 
-setTimeout(()=>{
-    console.log(myPromise);
-},6000)
+myPromise
+.then(result=>{
+    console.log(result);
+})
+.catch(error =>{
+    console.log(error);
+})
