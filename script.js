@@ -10,13 +10,17 @@
 const getTodos = async () =>{
     try{
         console.log('1');
-        const result = await new Promise(resolve => {
-            setTimeout(() => resolve(), 5000)
+
+        await new Promise((resolve) => {
+            setTimeout(() => resolve(), 4000)
         })
-        console.log(2); // in await they are not parellely processed
-        await new Promise(resolve => {
-            setTimeout(()=>resolve(), 4000)            
+
+        console.log(2);
+
+        await new Promise((resolve) => {
+            setTimeout(()=>resolve(), 5000)            
         })
+
         console.log(3);
     }
     catch (err){
@@ -24,5 +28,5 @@ const getTodos = async () =>{
     }
 };
 
-getTodos()
+getTodos(); 
 console.log('hello');
