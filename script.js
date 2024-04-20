@@ -1,38 +1,32 @@
-// fetch('https://jsonplaceholder.typicode.com/todos')
-// .then(data => data.json())
-// .then(result => {
-//     console.log(result);
-// })
-// .catch(error => {
-//     console.log(error);
-// })
+const input = document.querySelector('input');
+const button = document.querySelector('button');
+const ul = document.querySelector('ul');
 
-const getTodos = async () =>{
-    try{
-        console.log('1');
 
-        const p1 = new Promise((resolve) => {
-            setTimeout(() => resolve(), 4000)
-        })
-        // await p1
-        // console.log(2);
+const searchForRecipe = async()=>{
+  try {
+    ul.innerHTML=""
+    const searchString = input.value;
+    const endpoint = `https://api.edamam.com/api/recipes/v2?type=public&q=${searchString}&app_id=286bc7ab&app_key=35a1884caeea3f9d221f90a10178d3de%09`
+    const response = await fetch(endpoint);
+    const data = await response.json();
+    console.log(data);
+    const recipes = data.hits;
+    console.log(recipes);
+    recipes.forEach(obj=>{
+      const {recipe} = obj
+      console.log(recipe);
+      const li = document.createElement('li');
+      const img = document.createElement('img');
+      img.src = recipe.image;
+      li.innerHTML = recipe.label
+      li.appendChild(img)
+      ul.appendChild(li)
+    })
 
-        // we want to run both of this at same time ===> soo we use "promise.all"
+  } catch (error) {
+    
+  }
+}
 
-        const p2 = new Promise((resolve) => {
-            setTimeout(()=>resolve(), 5000)            
-        })
-        // await p2
-        // console.log(3); 
-
-        const p3 = Promise.all([p1,p2])
-        await p3
-        console.log(p3);
-    }
-    catch (err){
-        console.log(err);
-    }
-};
-
-getTodos(); 
-console.log('hello');
+button.addEventListener('click', searchForRecipe)
