@@ -10,12 +10,14 @@
 const getTodos = async () =>{
     try{
         console.log('1');
-        const result = await fetch('https://jsonplaceholder.typicode.com/todos');
-        console.log(result);
-        console.log('2');
-        const data  = await result.json()
-        console.log(data);
-        console.log('3');
+        const result = await new Promise(resolve => {
+            setTimeout(() => resolve(), 5000)
+        })
+        console.log(2); // in await they are not parellely processed
+        await new Promise(resolve => {
+            setTimeout(()=>resolve(), 4000)            
+        })
+        console.log(3);
     }
     catch (err){
         console.log(err);
