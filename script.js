@@ -9,8 +9,13 @@
 
 const getTodos = async () =>{
     try{
-        const result = await fetch('https://jsonplaceholder.typicode.com/todos')
+        console.log('1');
+        const result = await fetch('https://jsonplaceholder.typicode.com/todos');
+        console.log(result);
+        console.log('2');
         const data  = await result.json()
+        console.log(data);
+        console.log('3');
     }
     catch (err){
         console.log(err);
@@ -18,3 +23,4 @@ const getTodos = async () =>{
 };
 
 getTodos()
+console.log('hello');
