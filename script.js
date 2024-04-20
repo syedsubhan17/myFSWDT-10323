@@ -8,9 +8,13 @@
 // })
 
 const getTodos = async () =>{
-    const result = await fetch('https://jsonplaceholder.typicode.com/todos')
-    const data  = await result.json()
-    console.log(data);
-}
+    try{
+        const result = await fetch('https://jsonplaceholder.typicode.com/todos')
+        const data  = await result.json()
+    }
+    catch (err){
+        console.log(err);
+    }
+};
 
 getTodos()
