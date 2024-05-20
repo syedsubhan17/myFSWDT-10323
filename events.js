@@ -39,6 +39,41 @@ document.addEventListener('DOMContentLoaded', () => {
         taskContentDiv.appendChild(taskIcon);
         taskContentDiv.appendChild(taskTextDiv);
 
+        // Create a button for editing the task
+        const editButton = document.createElement('button');
+        editButton.innerHTML = 'Edit';
+        editButton.classList.add('text-blue-500', 'hover:text-blue-700', 'ml-2');
+        editButton.addEventListener('click', () => {
+            // Create an input field for editing
+            const editInput = document.createElement('input');
+            editInput.type = 'text';
+            editInput.value = taskTextDiv.textContent;
+            editInput.classList.add('text-slate-500', 'border', 'border-gray-300', 'rounded', 'px-2');
+
+            // Replace the text div with the edit input
+            taskContentDiv.replaceChild(editInput, taskTextDiv);
+
+            // Change the edit button to a save button
+            editButton.textContent = 'Save';
+            editButton.removeEventListener('click', saveEdit);
+            editButton.addEventListener('click', saveEdit);
+
+            // Function to save the edited text
+            function saveEdit() {
+                taskTextDiv.textContent = editInput.value;
+                taskContentDiv.replaceChild(taskTextDiv, editInput);
+                editButton.textContent = 'Edit';
+                editButton.removeEventListener('click', saveEdit);
+                editButton.addEventListener('click', () => {
+                    // Re-add the edit event listener to the button
+                    taskContentDiv.replaceChild(editInput, taskTextDiv);
+                    editButton.textContent = 'Save';
+                    editButton.removeEventListener('click', saveEdit);
+                    editButton.addEventListener('click', saveEdit);
+                });
+            }
+        });
+
         // Create a button for deleting the task
         const deleteButton = document.createElement('button');
         // Define the SVG for the delete icon inside the button
@@ -48,8 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
             taskDiv.remove();
         });
 
-        // Append the task content and delete button to the task div
+        // Append the task content, edit button, and delete button to the task div
         taskDiv.appendChild(taskContentDiv);
+        taskDiv.appendChild(editButton);
         taskDiv.appendChild(deleteButton);
 
         return taskDiv;
