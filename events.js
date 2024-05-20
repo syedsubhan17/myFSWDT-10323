@@ -21,8 +21,8 @@ const renderList = () => {
     todoConatainer.innerHTML = '' //clear boox and add new item
     todos.forEach((todo) => {
         const li = document.createElement('li')
-        const deleteButton = document.createElement('button')
-        const editButton = document.createElement('button')
+        const deleteButton = document.createElement('button') //created delete button
+        const editButton = document.createElement('buttoon') //created  edit button
 
         deleteButton.addEventListener('click', (e) => {
             li.remove()
